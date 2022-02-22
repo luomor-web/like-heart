@@ -17,17 +17,14 @@
 <canvas id="cvs"></canvas>
 <script type="text/javascript" src="./index.js"></script>
 <script>
-
-
     var ctx = document.getElementById('cvs').getContext('2d'),
         width  = 200,
         height = 400,
         heartList = [],
         heartCount = 0;
 
-        ctx.canvas.width = width;
-        ctx.canvas.height = height;
-
+    ctx.canvas.width = width;
+    ctx.canvas.height = height;
 
     function getRandomDis(){
 
@@ -37,7 +34,8 @@
            return +(Math.random() * 43);
         }
     }
-    function createHeart()  {
+
+    function createHeart() {
         heartCount ++;
 
         let positionArray = [{
@@ -100,8 +98,6 @@
         heartList = array;
     }
 
-
-
     (function loop () {
       ctx.clearRect(0, 0, width, height); 
       heartList.forEach(function (item) {
@@ -109,8 +105,6 @@
       });
       requestAnimationFrame(loop);
     }());
-
-
 
     setInterval(function(){
 
